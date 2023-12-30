@@ -33,22 +33,22 @@ return {
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
       local util = require "lspconfig/util"
       local lspconfig = require("lspconfig")
-      
+
       lspconfig.tsserver.setup({
-        capabilites = capabilities,
+        capabilities = capabilities,
       })
       lspconfig.lua_ls.setup({
-        capabilites = capabilities,
-
+        capabilities = capabilities,
       })
       lspconfig.bashls.setup({
-        capabilites = capabilities,
+        capabilities = capabilities,
       })
       lspconfig.yamlls.setup({
-        capabilites = capabilities,
+        capabilities = capabilities,
       })
 
       lspconfig.gopls.setup({
+        capabilities = capabilities,
         cmd = {"gopls"},
         filetypes = { "go", "gomod", "gowork", "gotmpl" },
         root_dir = util.root_pattern("go.work", "go.mod", ".git"),
