@@ -30,9 +30,13 @@ return {
     "neovim/nvim-lspconfig",
     lazy = false,
     config = function()
+
+      require('go').setup({ lsp_cfg = false })
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
       local util = require "lspconfig/util"
       local lspconfig = require("lspconfig")
+
+      local cfg = require'go.lsp'.config() -- config() return the go.nvim gopls setup
 
       lspconfig.tsserver.setup({
         capabilities = capabilities,
@@ -66,6 +70,8 @@ return {
       lspconfig.terraformls.setup({
         capabilites = capabilities,
       })
+
+      require('lspconfig').gopls.setup(cfg)
 
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
       vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition, {})

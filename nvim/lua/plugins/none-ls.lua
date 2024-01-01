@@ -9,6 +9,13 @@ return {
                 null_ls.builtins.formatting.gofmt,
               	null_ls.builtins.formatting.goimports,
         		null_ls.builtins.diagnostics.golangci_lint,
+                null_ls.builtins.formatting.golines.with({
+                  extra_args = {
+                    "--max-len=180",
+                    "--base-formatter=gofumpt",
+                  },
+                }),
+
                 null_ls.builtins.formatting.terraform_fmt,
              	null_ls.builtins.diagnostics.terraform_validate,
             },
