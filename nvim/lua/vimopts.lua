@@ -1,7 +1,12 @@
+local map = vim.api.nvim_set_keymap
+local opts = { noremap = true, silent = true }
+
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=4")
 vim.cmd("set softtabstop=4")
 vim.cmd("set shiftwidth=4")
+
+vim.cmd("set guicursor=i:ver25-iCursor")
 
 vim.g.mapleader = " "
 vim.g.moonflyWinSeparator = 2
@@ -22,5 +27,10 @@ vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 vim.keymap.set('n', '<c-u>', ':WhichKey<CR>')
 
+map('n', '<J>', ':bprev<CR>', opts)
+map('n', '<K>', ':bnext<CR>', opts)
+
 vim.wo.number = true
 
+vim.g.copilot_no_tab_maps = true
+vim.g.copilot_disable_mappings = 1

@@ -36,7 +36,7 @@ return {
       local util = require "lspconfig/util"
       local lspconfig = require("lspconfig")
 
-      local cfg = require'go.lsp'.config() -- config() return the go.nvim gopls setup
+      local cfg = require("go.lsp").config() -- config() return the go.nvim gopls setup
 
       lspconfig.tsserver.setup({
         capabilities = capabilities,
