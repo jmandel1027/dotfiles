@@ -31,7 +31,7 @@ return {
 		}
 
 		_Gopts = {
-			position = "center",
+			position = "left",
 			hl = "Type",
 			-- wrap = "overflow";
 		}
