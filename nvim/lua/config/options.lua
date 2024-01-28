@@ -3,6 +3,7 @@
 -- Add any additional options here
 
 vim.opt.relativenumber = false
+vim.opt.winbar = "%=%m %f"
 
 vim.cmd("set mouse=a")
 
@@ -14,4 +15,3 @@ vim.cmd("set noswapfile")
 vim.cmd("set guicursor=i:ver25-iCursor")
 
 vim.g.mapleader = " "
-vim.g.moonflyWinSeparator = 2
