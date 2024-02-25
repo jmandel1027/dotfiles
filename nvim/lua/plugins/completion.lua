@@ -5,11 +5,26 @@ return {
       return {}
     end,
   },
+  -- copilot
+  {
+    "zbirenbaum/copilot.lua",
+    enabled = true,
+    cmd = "Copilot",
+    event = "InsertEnter",
+    opts = {
+      suggestion = { enabled = false },
+      panel = { enabled = false },
+    },
+  },
   -- then: setup supertab in cmp
   {
     "hrsh7th/nvim-cmp",
     dependencies = {
       "hrsh7th/cmp-emoji",
+      {
+        "zbirenbaum/copilot-cmp",
+        opts = {},
+      },
     },
     ---@param opts cmp.ConfigSchema
     opts = function(_, opts)
@@ -22,10 +37,14 @@ return {
       local luasnip = require("luasnip")
       local cmp = require("cmp")
 
+      opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "copilot" }, { name = "emoji" } }))
+
       opts.mapping = vim.tbl_extend("force", opts.mapping, {
         ["<Tab>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
-            cmp.select_next_item()
+            -- You could replace select_next_item() with confirm({ select = true }) to get VS Code autocompletion behavior
+            -- cmp.select_next_item()
+            cmp.confirm({ select = true })
             -- You could replace the expand_or_jumpable() calls with expand_or_locally_jumpable()
             -- this way you will only jump inside the snippet region
           elseif luasnip.expand_or_jumpable() then
@@ -35,7 +54,7 @@ return {
           else
             fallback()
           end
-        end, { "i", "s" }),
+        end, { "i", "s", "c" }),
         ["<S-Tab>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
             cmp.select_prev_item()
@@ -44,7 +63,7 @@ return {
           else
             fallback()
           end
-        end, { "i", "s" }),
+        end, { "i", "s", "c" }),
       })
     end,
   },

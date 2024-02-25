@@ -15,3 +15,4 @@ vim.cmd("set noswapfile")
 vim.cmd("set guicursor=i:ver25-iCursor")
 
 vim.g.mapleader = " "
+vim.g.moonflyWinSeparator = 2
