@@ -1,0 +1,46 @@
+[aws]
+format = 'on [$symbol($profile )(\($region\) )]($style)'
+# style = 'bold orange'
+symbol = '☁️ '
+
+[aws.region_aliases]
+ap-southeast-2 = 'apse2'
+ap-southeast-1 = 'apse1'
+us-west-2 = 'uswe2'
+us-east-1 = 'usea1'
+eu-west-1 = 'euwe1'
+eu-central-1 = 'euce1'
+
+[character]
+format = '$symbol '
+success_symbol = '[🐚](bold green) '
+error_symbol = '[✗](bold red) '
+
+[git_branch]
+format = " [$symbol$branch]($style) "
+symbol = "🌿 "
+style = "bold yellow"
+
+[git_commit]
+commit_hash_length = 8
+style = "bold white"
+
+# [git_state]
+# format = '[\($state( $progress_current of $progress_total)\)]($style) '
+
+[git_status]
+conflicted = "⚔️ "
+# ahead = "🏎️ 💨 ×${count} "
+# behind = "🐢 ×${count} "
+# diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count} "
+# untracked = "🛤️ ×${count} "
+# stashed = "📦 "
+# modified = "📝 ×${count} "
+# staged = "🗃️ ×${count} "
+# renamed = "📛 ×${count} "
+# deleted = "🗑️ ×${count} "
+# style = "bright-white"
+# format = "$all_status$ahead_behind"
+#
+
+add_newline = true
