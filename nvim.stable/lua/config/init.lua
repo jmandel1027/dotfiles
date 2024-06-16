@@ -7,15 +7,12 @@ function M.setup()
     filetype plugin indent on
     set termguicolors
     set encoding=utf-8
-    set paste
-    set go+=a
     set noswapfile
-    set mouse=a
     syntax enable
   ]])
 
   -- set <leader> to <space>
-  -- vim.g.mapleader = " "
+  vim.g.mapleader = " "
 
   -- vim.cmd.colorscheme "catppuccin"
   -- Highlight comments in green

@@ -1,11 +1,16 @@
 return {
-	"nvim-lualine/lualine.nvim",
-	config = function()
-		require("lualine").setup({
-          options = {
-            theme = "ayu_dark",
-            section_separators = { left = '│', right = '│' },
-          },
-        })
-	end,
+  {
+    "nvim-lualine/lualine.nvim",
+    config = function()
+      require("lualine").setup({
+        options = {
+          theme = "ayu_dark",
+          section_separators = { left = "│", right = "│" },
+        },
+      })
+    end,
+    event = function()
+      return "UIEnter"
+    end,
+  },
 }
