@@ -16,6 +16,12 @@ format = '$symbol '
 success_symbol = '[🐚](bold green) '
 error_symbol = '[✗](bold red) '
 
+[directory]
+format = "[$path]($style)[$read_only]($read_only_style) "
+truncation_length = 3
+truncate_to_repo = false
+truncation_symbol = "…/"
+
 [git_branch]
 format = " [$symbol$branch]($style) "
 symbol = "🌿 "
@@ -29,7 +35,8 @@ style = "bold white"
 # format = '[\($state( $progress_current of $progress_total)\)]($style) '
 
 [git_status]
-conflicted = "⚔️ "
+disabled = true
+# conflicted = "⚔️ "
 # ahead = "🏎️ 💨 ×${count} "
 # behind = "🐢 ×${count} "
 # diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count} "

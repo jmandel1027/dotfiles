@@ -7,9 +7,8 @@ vim.cmd([[
     set termguicolors
     set encoding=utf-8
     set noswapfile
-    set expandtab
     syntax enable
-  ]])
+]])
 
 -- set <leader> to <space>
 vim.g.mapleader = " "
@@ -25,8 +24,6 @@ vim.o.number = true -- Show line numbers
 vim.o.ruler = true -- Always show the cursor position
 vim.o.shiftwidth = 2 -- Number of spaces to use for each step of (auto)indent
 vim.o.tabstop = 2 -- Number of spaces that a <Tab> in the file counts for
-vim.o.novisualbell = true -- Disable visual bell
-vim.o.noerrorbells = true -- Disable error bells
 vim.o.smartcase = true -- Smart case sensitivity
 vim.o.clipboard = "unnamedplus" -- Use system clipboard
 vim.wo.colorcolumn = "120" -- Set color column at 80th column
