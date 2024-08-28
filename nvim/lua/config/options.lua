@@ -24,15 +24,17 @@ vim.o.number = true -- Show line numbers
 vim.o.ruler = true -- Always show the cursor position
 vim.o.shiftwidth = 2 -- Number of spaces to use for each step of (auto)indent
 vim.o.tabstop = 2 -- Number of spaces that a <Tab> in the file counts for
+vim.o.softtabstop = 2
 vim.o.smartcase = true -- Smart case sensitivity
 vim.o.clipboard = "unnamedplus" -- Use system clipboard
 vim.wo.colorcolumn = "120" -- Set color column at 80th column
 vim.o.conceallevel = 1 -- Show concealable characters
 vim.o.relativenumber = false
+vim.g.autoformat = false
 -- vim.o.winbar = "%=%m %f"
 
 -- Auto indent settings
-vim.o.autoindent = true
+-- vim.o.autoindent = tru
 
 -- keymaps
 -- Enable 24-bit RGB colors
