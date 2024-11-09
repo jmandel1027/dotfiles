@@ -30,7 +30,7 @@ vim.o.clipboard = "unnamedplus" -- Use system clipboard
 vim.wo.colorcolumn = "120" -- Set color column at 80th column
 vim.o.conceallevel = 1 -- Show concealable characters
 vim.o.relativenumber = false
-vim.g.autoformat = false
+vim.g.autoformat = true
 -- vim.o.winbar = "%=%m %f"
 
 -- Auto indent settings
