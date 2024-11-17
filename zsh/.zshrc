@@ -9,8 +9,11 @@ alias g=git
 
 autoload -U compinit && compinit
 
-source ~/.zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+export ZSH_AUTOSUGGEST_USE_ASYNC=true
+
+source ~/.zsh/plugins/zsh-async/async.plugin.zsh
+source ~/.zsh/plugins/zsh-completions/zsh-completions.plugin.zsh
+source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
@@ -27,6 +30,8 @@ export ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX=YES
 export TMUX_CONF=~/.config/tmux/tmux.conf
 
 alias tmux='tmux -f $TMUX_CONF'
+
+alias zsh-debug="zmodload zsh/zprof; time zsh -i -c exit; zprof"
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/jmandel/.rd/bin:$PATH"

@@ -11,10 +11,10 @@ local on_attach = function(client, bufnr)
     })
   end
 
-  -- Set expandtab and shiftwidth for the current buffer
-  vim.api.nvim_buf_set_option(bufnr, "expandtab", true)
-  vim.api.nvim_buf_set_option(bufnr, "shiftwidth", 2)
-  vim.api.nvim_buf_set_option(bufnr, "tabstop", 2)
+  -- Set expandtab and shiftwidth for the current buffering
+  vim.bo[bufnr].expandtab = true
+  vim.bo[bufnr].shiftwidth = 2
+  vim.bo[bufnr].tabstop = 2
 end
 
 -- Configure bashls to use shfmt for formatting

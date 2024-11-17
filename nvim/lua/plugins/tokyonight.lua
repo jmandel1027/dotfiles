@@ -2,7 +2,7 @@ return {
   -- Configure tokyonight theme
   {
     "folke/tokyonight.nvim",
-    enabled = false,
+    -- enabled = false,
     config = function()
       require("tokyonight").setup({
         style = "night", -- Set the style to "night" for a darker theme
@@ -11,4 +11,3 @@ return {
     end,
   },
 }
-

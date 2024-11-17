@@ -19,5 +19,8 @@ return {
         },
       },
     },
+    -- init = function()
+    --   vim.cmd("Neotree show")
+    -- end,
   },
 }
