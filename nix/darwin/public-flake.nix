@@ -10,7 +10,7 @@
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, ... }:
   let
-    configuration = { pkgs, config, ... }: {
+    configuration = { pkgs, config, confidential }: {
       nixpkgs.config.allowUnfree = true;
 
       environment.systemPackages = with pkgs; [
@@ -95,23 +95,12 @@
           "saml2aws"
           "supervisor"
           "mas"
-          #### PRIVATE
-          "square/formula/aws-creds"
-          "square/formula/sq"
-          "square/formula/sq-codesearch"
         ];
         casks = [
           "iina"
           "the-unarchiver"
         ];
-        taps = [
-          ### PRIVATE
-          {
-            name = "square/formula";
-            clone_target = "git+ssh://git@github.com/squareup/homebrew-formulas.git";
-            force_auto_update = true;
-          }
-        ];
+        taps = [];
         masApps = {};
         onActivation = {
           cleanup = "zap";
@@ -128,7 +117,6 @@
     };
   in
   {
-
     darwinConfigurations."jmandel" = nix-darwin.lib.darwinSystem {
       modules = [
         configuration
