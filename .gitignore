@@ -6,5 +6,6 @@ packer*
 tmux/plugins*
 github-copilot*
 nix*
+nix/darwin/flake.nix
 zsh/.zshrc.private
 

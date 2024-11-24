@@ -12,7 +12,7 @@ eu-west-1 = 'euwe1'
 eu-central-1 = 'euce1'
 
 [character]
-format = '$symbol '
+format = '$symbol'
 
 success_symbol = '[＄](bold green)'
 # success_symbol = '[🐚](bold green) '
@@ -35,6 +35,9 @@ style = "bold white"
 
 # [git_state]
 # format = '[\($state( $progress_current of $progress_total)\)]($style) '
+
+[ruby]
+disabled = true
 
 [git_status]
 disabled = true

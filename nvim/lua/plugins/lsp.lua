@@ -39,6 +39,7 @@ return {
     opts = {
       autoformat = true, -- Assuming you want to enable autoformatting
       on_attach = on_attach,
+      inlay_hints = { enabled = false },
     },
   },
 }

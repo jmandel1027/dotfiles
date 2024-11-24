@@ -9,12 +9,46 @@ alias g=git
 
 autoload -U compinit && compinit
 
-export ZSH_AUTOSUGGEST_USE_ASYNC=true
+# History
+# HISTSIZE=5000 # yolo
+HISTFILE=~/.zsh_history
+# SAVEHIST=$HISTSIZE
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
 
+# zsh
+export ZSH_AUTOSUGGEST_USE_ASYNC=true
 source ~/.zsh/plugins/zsh-async/async.plugin.zsh
 source ~/.zsh/plugins/zsh-completions/zsh-completions.plugin.zsh
 source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 
+# fzf
+export FZF_COMPLETION_TRIGGER="~~" # (default: '**')
+export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
+
+# source /opt/homebrew/opt/fzf/shell/key-bindings.zsh
+# source /opt/homebrew/opt/fzf/shell/completion.zsh
+
+# Use fd (https://github.com/sharkdp/fd) for listing path candidates.
+# - The first argument to the function ($1) is the base path to start traversal
+# - See the source code (completion.{bash,zsh}) for the details.
+_fzf_compgen_path() {
+  fd --hidden --exclude .git . "$1"
+}
+
+# Use fd to generate the list for directory completion
+_fzf_compgen_dir() {
+  fd --type=d --hidden --exclude .git . "$1"
+}
+
+# Go
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 # Homebrew
@@ -45,5 +79,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-eval "$(zoxide init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
+eval "$(fzf --zsh)"
+
