@@ -1,7 +1,6 @@
 [aws]
 format = 'on [$symbol($profile )(\($region\) )]($style)'
-# style = 'bold orange'
-symbol = '☁️ '
+symbol = '☁️'
 
 [aws.region_aliases]
 ap-southeast-2 = 'apse2'
@@ -14,8 +13,8 @@ eu-central-1 = 'euce1'
 [character]
 format = '$symbol'
 
-success_symbol = '[＄](bold green)'
-# success_symbol = '[🐚](bold green) '
+# success_symbol = '[＄](bold green)'
+success_symbol = '[🐚](bold green) '
 error_symbol = '[✗](bold red) '
 
 [directory]

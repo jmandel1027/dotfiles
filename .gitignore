@@ -1,10 +1,11 @@
 gh*
-githuh*
+!ghostty*
+github*
 iterm2/AppSupport*
 iterm2/sockets*
-packer*
 tmux/plugins*
 github-copilot*
+packer*
 nix*
 nix/darwin/flake.nix
 zsh/.zshrc.private
