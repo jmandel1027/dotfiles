@@ -5,7 +5,11 @@ export STARSHIP_CONFIG=~/.config/starship/console.toml
 
 echo '\e[5 q'
 
-alias g=git
+alias g='git'
+alias k='kubectl'
+alias ls='ls_with_depth'
+alias ls='eza -l --icons --total-size --no-time --tree -L 1'
+alias cat='bat'
 
 autoload -U compinit && compinit
 
@@ -33,8 +37,8 @@ export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
 
-# source /opt/homebrew/opt/fzf/shell/key-bindings.zsh
-# source /opt/homebrew/opt/fzf/shell/completion.zsh
+source /opt/homebrew/opt/fzf/shell/key-bindings.zsh
+source /opt/homebrew/opt/fzf/shell/completion.zsh
 
 # Use fd (https://github.com/sharkdp/fd) for listing path candidates.
 # - The first argument to the function ($1) is the base path to start traversal
@@ -67,6 +71,10 @@ alias tmux='tmux -f $TMUX_CONF'
 
 alias zsh-debug="zmodload zsh/zprof; time zsh -i -c exit; zprof"
 
+export EZA_CONFIG_DIR=~/.config/eza
+
+export BAT_THEME=tokyonight_night
+
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/jmandel/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
@@ -79,8 +87,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-if [ -n "${GHOSTTY_RESOURCES_DIR}" ]; then
-    builtin source "${GHOSTTY_RESOURCES_DIR}/shell-integration/zsh/ghostty-integration"
+if [[ -n $GHOSTTY_RESOURCES_DIR ]]; then
+  autoload -Uz -- "$GHOSTTY_RESOURCES_DIR"/shell-integration/zsh/ghostty-integration
+  ghostty-integration
+  unfunction ghostty-integration
 fi
 
 eval "$(zoxide init --cmd cd zsh)"

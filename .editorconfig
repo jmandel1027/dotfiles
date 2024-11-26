@@ -1,0 +1,10 @@
+# shellfmt configuration
+[[shell]]
+# like -i=2
+indent_style = space
+indent_size = 2
+
+# --binary-next-line
+binary_next_line   = true
+# --case-indent
+switch_case_indent = true

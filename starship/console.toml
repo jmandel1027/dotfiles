@@ -1,5 +1,26 @@
+#Location: ~/.config/starship/console.toml
+#What_is_starship: https://starship.rs/
+
+add_newline = true
+command_timeout = 2000
+
+format = """$env_var$os$username$hostname$kubernetes$directory$git_branch$git_status$aws
+$character
+"""
+
+[character]
+# success_symbol = '[🐚](bold green) '
+success_symbol = '[  \$](bold green) '
+error_symbol = '[  🚫](bold red) '
+
+[env_var]
+symbol = "  "
+variable = 'SHELL'
+format = "$symbol"
+disabled = false
+
 [aws]
-format = 'on [$symbol($profile )(\($region\) )]($style)'
+format = 'in [$symbol($profile ) ($region )]($style)'
 symbol = '☁️'
 
 [aws.region_aliases]
@@ -10,48 +31,93 @@ us-east-1 = 'usea1'
 eu-west-1 = 'euwe1'
 eu-central-1 = 'euce1'
 
-[character]
-format = '$symbol'
+# ---
 
-# success_symbol = '[＄](bold green)'
-success_symbol = '[🐚](bold green) '
-error_symbol = '[✗](bold red) '
+[os]
+format = '[$symbol](bold white) '
+disabled = false
 
+[os.symbols]
+Windows = ' '
+Arch = '󰣇'
+Ubuntu = ''
+Macos = '󰀵'
+Unknown = '󰠥'
+
+# ---y
+
+# Shows the username
+[username]
+style_user = 'yellow bold'
+style_root = 'black bold'
+format = '[is](gray bold) [$user](#4d80f7) ' # 2883ff
+disabled = false
+show_always = true
+
+# Shows the hostname
+[hostname]
+ssh_only = false
+format = '[@](gray bold) [$hostname](bold blue) '
+disabled = false
+
+# Shows current directory
 [directory]
-format = "[$path]($style)[$read_only]($read_only_style) "
-truncation_length = 3
-truncate_to_repo = false
-truncation_symbol = "…/"
+truncation_length = 0
+truncation_symbol = '…/'
+home_symbol = '~'
+# read_only_style = '197'
+read_only = '  '
+format = '[in](gray bold) [$path]($style)[$read_only]($read_only_style) '
+style = '#7ed1fb'                                                         # yellow bold
 
+
+# Shows current git branch
 [git_branch]
-format = " [$symbol$branch]($style) "
-symbol = "🌿 "
-style = "bold yellow"
+# symbol = ' '
+symbol = '🌿 '
+format = '[on](gray bold) [$symbol$branch]($style) '
+# truncation_length = 0
+# truncation_symbol = '…/'
+style = 'bold green'
 
-[git_commit]
-commit_hash_length = 8
-style = "bold white"
+# Shows current git status
+[git_status]
+disabled = true
+conflicted = "⚔️ "
+ahead = "🏎️ 💨 ×${count} "
+behind = "🐢 ×${count} "
+diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count} "
+untracked = "🛤️ ×${count} "
+stashed = "📦 "
+modified = "📝 ×${count} "
+staged = "🗃️ ×${count} "
+renamed = "📛 ×${count} "
+deleted = "🗑️ ×${count} "
+style = "bright-white"
+format = "$all_status$ahead_behind"
 
-# [git_state]
-# format = '[\($state( $progress_current of $progress_total)\)]($style) '
+# Shows kubernetes context and namespace
+[kubernetes]
+format = 'via [󱃾 $context\($namespace\)](bold purple) '
+disabled = true
+
+# ---
+[docker_context]
+disabled = true
+
+[helm]
+disabled = true
+
+[python]
+symbol = '󰌠'
+python_binary = ['./venv/bin/python', 'python', 'python3', 'python2']
+format = '[//](black bold) [${symbol} ${pyenv_prefix}(${version} )(\($virtualenv\) )]($style) '
+
+[nodejs]
+disabled = true
 
 [ruby]
 disabled = true
 
-[git_status]
+[terraform]
 disabled = true
-# conflicted = "⚔️ "
-# ahead = "🏎️ 💨 ×${count} "
-# behind = "🐢 ×${count} "
-# diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count} "
-# untracked = "🛤️ ×${count} "
-# stashed = "📦 "
-# modified = "📝 ×${count} "
-# staged = "🗃️ ×${count} "
-# renamed = "📛 ×${count} "
-# deleted = "🗑️ ×${count} "
-# style = "bright-white"
-# format = "$all_status$ahead_behind"
-#
-
-add_newline = true
