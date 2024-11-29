@@ -1,4 +1,10 @@
 local on_attach = function(client, bufnr)
+  -- Disable autoformatting for JSON and YAML files
+  local filetype = vim.api.nvim_buf_get_option(bufnr, "filetype")
+  if filetype == "json" or filetype == "yaml" then
+    return
+  end
+
   -- Enable autoformatting
   if client.server_capabilities.documentFormattingProvider then
     vim.api.nvim_create_augroup("Format", { clear = true })
@@ -10,11 +16,6 @@ local on_attach = function(client, bufnr)
       end,
     })
   end
-
-  -- Set expandtab and shiftwidth for the current buffering
-  vim.bo[bufnr].expandtab = true
-  vim.bo[bufnr].shiftwidth = 2
-  vim.bo[bufnr].tabstop = 2
 end
 
 -- Configure bashls to use shfmt for formatting

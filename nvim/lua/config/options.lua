@@ -3,11 +3,11 @@
 -- Add any additional options here
 --
 vim.cmd([[
-    filetype plugin indent on
-    set termguicolors
-    set encoding=utf-8
-    set noswapfile
-    syntax enable
+  filetype plugin indent on
+  set termguicolors
+  set encoding=utf-8
+  set noswapfile
+  syntax enable
 ]])
 
 -- set <leader> to <space>
@@ -29,12 +29,7 @@ vim.o.smartcase = true -- Smart case sensitivity
 vim.o.clipboard = "unnamedplus" -- Use system clipboard
 vim.wo.colorcolumn = "120" -- Set color column at 80th column
 vim.o.conceallevel = 1 -- Show concealable characters
-vim.o.relativenumber = false
 vim.g.autoformat = true
--- vim.o.winbar = "%=%m %f"
-
--- Auto indent settings
--- vim.o.autoindent = tru
 
 -- keymaps
 -- Enable 24-bit RGB colors

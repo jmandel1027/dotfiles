@@ -7,7 +7,6 @@ echo '\e[5 q'
 
 alias g='git'
 alias k='kubectl'
-alias ls='ls_with_depth'
 alias ls='eza -l --icons --total-size --no-time --tree -L 1'
 alias cat='bat'
 

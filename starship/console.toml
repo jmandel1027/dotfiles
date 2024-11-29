@@ -50,7 +50,7 @@ Unknown = '󰠥'
 [username]
 style_user = 'yellow bold'
 style_root = 'black bold'
-format = '[is](gray bold) [$user](#4d80f7) ' # 2883ff
+format = '[is](gray bold) [$user](#4d80f7) '
 disabled = false
 show_always = true
 
