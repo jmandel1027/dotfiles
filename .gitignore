@@ -6,7 +6,8 @@ iterm2/sockets*
 tmux/plugins*
 github-copilot*
 packer*
-nix*
+nix.bak*
 nix/darwin/flake.nix
+nushell*
 zsh/.zshrc.private
 

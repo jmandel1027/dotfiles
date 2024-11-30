@@ -10,7 +10,8 @@ cursor-style-blink = true
 
 # shell-integration-features = no-cursor
 mouse-hide-while-typing = true
-shell-integration = zsh
+shell-integration = fish
+# shell-integration = zsh
 # macos-titlebar-style = hidden
 
 background-opacity = 0.9

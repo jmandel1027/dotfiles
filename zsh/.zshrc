@@ -7,15 +7,14 @@ echo '\e[5 q'
 
 alias g='git'
 alias k='kubectl'
-alias ls='eza -l --icons --total-size --no-time --tree -L 1'
 alias cat='bat'
 
 autoload -U compinit && compinit
 
 # History
-# HISTSIZE=5000 # yolo
+HISTSIZE=10000 
 HISTFILE=~/.zsh_history
-# SAVEHIST=$HISTSIZE
+SAVEHIST=$HISTSIZE
 setopt appendhistory
 setopt sharehistory
 setopt hist_ignore_space
@@ -69,8 +68,6 @@ export TMUX_CONF=~/.config/tmux/tmux.conf
 alias tmux='tmux -f $TMUX_CONF'
 
 alias zsh-debug="zmodload zsh/zprof; time zsh -i -c exit; zprof"
-
-export EZA_CONFIG_DIR=~/.config/eza
 
 export BAT_THEME=tokyonight_night
 
