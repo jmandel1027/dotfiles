@@ -10,6 +10,16 @@ alias k='kubectl'
 alias cat='bat'
 alias ls='lsd'
 
+alias df='df -h'
+alias ducks='du -cksh * | sort -rh|head -11' # Lists folders and files sizes in the current folder
+alias f='find . -iname'
+alias gr='grep -r' # Recursive grep
+alias m='less'
+alias systail='tail -f /var/log/system.log'
+alias top='top -o cpu'
+# Shows most used commands, from: http://lifehacker.com/software/how-to/turbocharge-your-terminal-274317.php
+alias profileme="history | awk '{print \$4}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"
+
 # History
 # set -U fish_history (mktemp -u ~/.local/share/fish/fish_history)
 set -U fish_history_max 100000
@@ -50,25 +60,12 @@ set -x LSD_CONFIG_FILE ~/.config/lsd/config.yaml
 # Rancher Desktop PATH
 set -x PATH /Users/jmandel/.rd/bin $PATH
 
-# RVM
-# set -x PATH $PATH $HOME/.rvm/bin
-# if test -s "$HOME/.rvm/scripts/rvm"
-#     source "$HOME/.rvm/scripts/rvm"
-# end
-
-# NVM
-# set -x NVM_DIR $HOME/.nvm
-# if test -s "$NVM_DIR/nvm.sh"
-#     source "$NVM_DIR/nvm.sh"
-# end
-# if test -s "$NVM_DIR/bash_completion"
-#     source "$NVM_DIR/bash_completion"
-# end
-
 # Ghostty integration
 if test -n "$GHOSTTY_RESOURCES_DIR"
     source $GHOSTTY_RESOURCES_DIR/shell-integration/fish/vendor_conf.d/ghostty-shell-integration.fish
 end
+
+source ~/.private.fish
 
 # Starship prompt
 starship init fish | source

@@ -67,4 +67,24 @@ install-nix force="false":
     if {{ if force == "true" { "true" } else { "! command -v nix" } }}; then {{ "curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install" }}; fi
 
 # Bootstrap block
-bootstrap-block: install-nix (block "switch")
+bootstrap-block: install-nix (block "switch") (change-shell "fish")
+
+# Helpers
+
+# Change the login shell for the current user
+[private]
+change-shell SHELL:
+    #!/bin/sh
+    set -eux
+    current_shell="$(getent passwd "$USER" | cut -d: -f7)"
+    new_shell="/run/current-system/sw/bin/"{{ quote(SHELL) }}
+    if ! test -f "$new_shell"; then
+        echo "error: $new_shell not found"
+        exit 1
+    fi
+    if ! grep --line-regex --fixed-strings "$new_shell" /etc/shells >/dev/null 2>/dev/null; then
+        echo "$new_shell" | sudo tee -a /etc/shells
+    fi
+    if test "$current_shell" != "$new_shell"; then
+        chsh -s "$new_shell"
+    fi
