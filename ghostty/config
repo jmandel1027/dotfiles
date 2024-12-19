@@ -5,6 +5,10 @@ adjust-cell-height = 40%
 theme = "Tomorrow Night Bright"
 window-colorspace = display-p3
 
+# macos-icon = custom-color
+# macos-icon-ghost-color = "yellow"
+# macos-icon-screen-color = "purple,maroon"
+
 cursor-style = block
 cursor-style-blink = true
 

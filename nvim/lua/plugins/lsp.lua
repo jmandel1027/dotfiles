@@ -27,7 +27,7 @@ require("lspconfig").bashls.setup({
         enable = true,
         defaultFormatter = "shfmt",
         shfmt = {
-          extraArgs = { "-i", "2", "-ci" }, -- Use 2 spaces for indentation
+          extraArgs = { "-i", "2", "-ci", "-bn" }, -- Use 2 spaces for indentation
         },
       },
     },

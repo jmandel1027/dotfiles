@@ -27,7 +27,6 @@ vim.o.tabstop = 2 -- Number of spaces that a <Tab> in the file counts for
 vim.o.softtabstop = 2
 vim.o.smartcase = true -- Smart case sensitivity
 vim.o.clipboard = "unnamedplus" -- Use system clipboard
-vim.wo.colorcolumn = "120" -- Set color column at 80th column
 vim.o.conceallevel = 1 -- Show concealable characters
 vim.g.autoformat = true
 

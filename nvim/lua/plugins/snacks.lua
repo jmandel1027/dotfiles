@@ -36,6 +36,7 @@ return {
           { title = "Actions\n", section = "keys", indent = 2, padding = 2 },
         },
       },
+      input = { enabled = true },
       notifier = {
         enabled = true,
         timeout = 3000,
