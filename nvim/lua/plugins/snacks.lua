@@ -75,9 +75,6 @@ return {
           Snacks.toggle.treesitter():map("<leader>uT")
           Snacks.toggle.option("background", { off = "light", on = "dark", name = "Dark Background" }):map("<leader>ub")
           Snacks.toggle.inlay_hints():map("<leader>uh")
-
-          -- Set background to #1a1b26
-          vim.api.nvim_set_hl(0, "SnacksNormal", { bg = "#1a1b26" })
         end,
       })
     end,
