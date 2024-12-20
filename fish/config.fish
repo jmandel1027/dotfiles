@@ -20,9 +20,8 @@ alias top='top -o cpu'
 # Shows most used commands, from: http://lifehacker.com/software/how-to/turbocharge-your-terminal-274317.php
 alias profileme="history | awk '{print \$4}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"
 
-# History
-# set -U fish_history (mktemp -u ~/.local/share/fish/fish_history)
-set -U fish_history_max 100000
+alias herma='hermit_activate'
+alias hermd='hermit_deactivate'
 
 # zsh-autosuggestions equivalent in Fish
 # Fish has built-in autosuggestions, no need for additional plugins
@@ -46,8 +45,7 @@ set -x GOROOT (brew --prefix golang)/libexec
 # PATH
 set -x PATH $PATH $GOPATH/bin $GOROOT/bin
 
-# iTerm2 and tmux integration
-set -x ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX YES
+# tmux integration
 set -x TMUX_CONF ~/.config/tmux/tmux.conf
 alias tmux='tmux -f $TMUX_CONF'
 
