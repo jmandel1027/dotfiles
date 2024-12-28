@@ -12,10 +12,32 @@ return {
         sections = {
           lualine_a = {
             function()
-              return " 󰀘 "
+              local mode = vim.api.nvim_get_mode().mode
+              if mode == "n" then
+                -- return " ⌽ "
+                -- return " ⍒ "
+                return " ℕ "
+              elseif mode == "i" then
+                -- return " ⍍ "
+                return " ⅈ "
+              elseif mode == "v" or mode == "V" or mode == "" then
+                -- return " ⍔ "
+                return " ℽ "
+              else
+                -- return " ⌾ "
+                -- return " ⍋ "
+                -- return " ⅀ "
+                return " ℂ "
+              end
+              -- return " 󰀘 "
             end,
           },
-          lualine_b = { "branch" },
+          lualine_b = {
+            {
+              "branch",
+              icon = "⨚ ",
+            },
+          },
           lualine_c = {
             function()
               return vim.fn.fnamemodify(vim.fn.expand("%"), ":~:.")

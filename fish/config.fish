@@ -26,7 +26,8 @@ alias hermd='hermit_deactivate'
 # zsh-autosuggestions equivalent in Fish
 # Fish has built-in autosuggestions, no need for additional plugins
 # fish_config theme save
-set -U fish_color_autosuggestion 555 # Change '555' to your preferred color code
+set -U fish_color_autosuggestion 555
+set -U fish_history 50000
 
 # fzf configuration
 set -x FZF_COMPLETION_TRIGGER "~~"

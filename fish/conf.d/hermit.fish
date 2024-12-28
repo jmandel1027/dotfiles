@@ -1,16 +1,3 @@
-function __hermit_auto_env
-    set -l new_hermit_env (find_enclosing_hermit_env)
-    if test "$new_hermit_env" = "$HERMIT_ENV"
-        return
-    end
-    if test -n "$HERMIT_ENV"
-        hermit_deactivate
-    end
-    if test -n "$new_hermit_env"
-        hermit_activate
-    end
-end
-
 function hermit_activate
     set -l hermit_env (find_enclosing_hermit_env)
     echo "Activating Hermit env: $hermit_env"
