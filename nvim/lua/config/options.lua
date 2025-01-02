@@ -13,10 +13,6 @@ vim.cmd([[
 -- set <leader> to <space>
 vim.g.mapleader = " "
 
--- vim.cmd.colorscheme "catppuccin"
--- Highlight comments in green
-vim.api.nvim_set_hl(0, "Comment", { ctermfg = "green" })
-
 -- General editor settings
 vim.o.expandtab = true -- Convert tabs to spaces
 vim.o.hlsearch = true -- Highlight all search results
@@ -29,21 +25,8 @@ vim.o.smartcase = true -- Smart case sensitivity
 vim.o.clipboard = "unnamedplus" -- Use system clipboard
 vim.o.conceallevel = 1 -- Show concealable characters
 vim.g.autoformat = true
+vim.o.lazyredraw = true -- Set lazyredraw
 
 -- keymaps
 -- Enable 24-bit RGB colors
 vim.o.termguicolors = true
-
--- Persistent undo setup
-if vim.fn.has("persistent_undo") == 1 then
-  -- Create the undo directory if it does not exist
-  local undodir = vim.fn.expand("$HOME/.vimhis")
-  if not vim.fn.isdirectory(undodir) then
-    vim.fn.mkdir(undodir, "p")
-  end
-
-  -- Set the undodir and undo-related settings
-  vim.o.undodir = undodir
-  vim.o.undolevels = 5000
-  vim.o.undofile = true
-end

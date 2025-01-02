@@ -1,3 +1,4 @@
+btop/*.log
 !ghostty*
 github*
 iterm2/AppSupport*

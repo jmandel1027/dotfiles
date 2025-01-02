@@ -2,6 +2,8 @@ font-family = "FiraCode Nerd Font"
 font-size = 14
 adjust-cell-height = 40%
 
+keybind = global:cmd+`=toggle_quick_terminal
+
 theme = "Tomorrow Night Bright"
 window-colorspace = display-p3
 
