@@ -12,6 +12,7 @@ vim.cmd([[
 
 -- set <leader> to <space>
 vim.g.mapleader = " "
+vim.g.autoformat = true
 
 -- General editor settings
 vim.o.expandtab = true -- Convert tabs to spaces
@@ -24,7 +25,8 @@ vim.o.softtabstop = 2
 vim.o.smartcase = true -- Smart case sensitivity
 vim.o.clipboard = "unnamedplus" -- Use system clipboard
 vim.o.conceallevel = 1 -- Show concealable characters
-vim.g.autoformat = true
+vim.o.wrap = true -- Enable line wrapping
+vim.o.sidescrolloff = 999 -- Prevent horizontal scrolling unless necessary
 
 -- keymaps
 -- Enable 24-bit RGB colors

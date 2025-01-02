@@ -45,7 +45,7 @@ return {
       words = { enabled = true },
       terminal = { enabled = false },
       scroll = { enabled = false },
-      indent = { enabled = false },
+      indent = { enabled = true },
       profiler = { enabled = true },
       styles = {
         notification = {
