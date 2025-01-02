@@ -5,7 +5,7 @@ return {
       ensure_installed = {
         "black",
         "docker-compose-language-service",
-        "dockerfile-language-server ",
+        "dockerfile-language-server",
         "eslint-lsp",
         "gofumpt",
         "golangci-lint",

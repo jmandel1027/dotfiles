@@ -25,7 +25,6 @@ vim.o.smartcase = true -- Smart case sensitivity
 vim.o.clipboard = "unnamedplus" -- Use system clipboard
 vim.o.conceallevel = 1 -- Show concealable characters
 vim.g.autoformat = true
-vim.o.lazyredraw = true -- Set lazyredraw
 
 -- keymaps
 -- Enable 24-bit RGB colors

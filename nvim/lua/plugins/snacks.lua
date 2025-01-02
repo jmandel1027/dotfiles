@@ -32,6 +32,7 @@ return {
           { title = "Recent Files\n", section = "recent_files", indent = 2, padding = 2 },
           { title = "Projects\n", section = "projects", indent = 2, padding = 2 },
           { title = "Actions\n", section = "keys", indent = 2, padding = 2 },
+          { section = "startup" },
         },
       },
       input = { enabled = true },
