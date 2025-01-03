@@ -1,13 +1,11 @@
 -- Options are automatically loaded before lazy.nvim startup
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
---
+
 vim.cmd([[
-  filetype plugin indent on
   set termguicolors
   set encoding=utf-8
   set noswapfile
-  syntax enable
 ]])
 
 -- set <leader> to <space>

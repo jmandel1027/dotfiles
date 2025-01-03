@@ -9,6 +9,7 @@ github-copilot*
 packer*
 nix.bak*
 nix/darwin/flake.nix
+nvim.bak
 nushell*
 zsh/.zshrc.private
 
