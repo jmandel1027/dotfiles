@@ -44,7 +44,7 @@ Ubuntu = ''
 Macos = '󰀵'
 Unknown = '󰠥'
 
-# ---y
+# ---
 
 # Shows the username
 [username]

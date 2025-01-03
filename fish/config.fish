@@ -1,6 +1,3 @@
-if status is-interactive
-    # Commands to run in interactive sessions can go here
-end
 # Starship configuration
 set -x STARSHIP_CONFIG ~/.config/starship/console.toml
 
@@ -20,8 +17,9 @@ alias top='top -o cpu'
 # Shows most used commands, from: http://lifehacker.com/software/how-to/turbocharge-your-terminal-274317.php
 alias profileme="history | awk '{print \$4}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"
 
-alias herma='hermit_activate'
-alias hermd='hermit_deactivate'
+alias hermi="hermit init"
+alias herma=". bin/activate-hermit.fish"
+alias hermd="deactivate-hermit"
 
 # zsh-autosuggestions equivalent in Fish
 # Fish has built-in autosuggestions, no need for additional plugins
