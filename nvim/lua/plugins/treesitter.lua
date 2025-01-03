@@ -20,6 +20,7 @@ return {
         "hcl",
         "html",
         "javascript",
+        "just",
         "jsdoc",
         "json",
         "json5",
