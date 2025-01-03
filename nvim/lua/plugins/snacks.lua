@@ -10,7 +10,7 @@ return {
         sections = {
           {
             section = "terminal",
-            cmd = "chafa ~/.config/media/block-reverse-crop.gif --format symbols --symbols ascii --size 45x18 --stretch --fg-only; sleep .1",
+            cmd = "chafa ~/.config/media/block-400.png --format symbols --symbols ascii --size 45x18 --stretch --fg-only",
             height = 18,
             width = 45,
             pane = 2,
