@@ -68,7 +68,7 @@ source ~/.private.fish
 starship init fish | source
 
 # Carapace initialization
-eval (carapace _fish)
+carapace _carapace | source
 
 # zoxide
 eval (zoxide init fish)

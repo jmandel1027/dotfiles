@@ -11,5 +11,6 @@ nix.bak*
 nix/darwin/flake.nix
 nvim.bak
 nushell*
+raycast/extensions*
 zsh/.zshrc.private
 
