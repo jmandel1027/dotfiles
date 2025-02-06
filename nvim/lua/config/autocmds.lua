@@ -25,6 +25,16 @@ vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost", "InsertEnter" }, {
   group = numbertogglegroup,
 })
 
+-- Disable horizontal scrolling in NeoTree
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "neo-tree",
+  callback = function()
+    vim.cmd([[
+      setlocal scrolloff=999
+    ]])
+  end,
+})
+
 -- disable NeoTree italics
 vim.api.nvim_create_autocmd({ "Colorscheme", "BufReadPre", "BufNewFile" }, {
   pattern = "*",

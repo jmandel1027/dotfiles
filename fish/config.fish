@@ -27,6 +27,9 @@ alias hermd="deactivate-hermit"
 set -U fish_color_autosuggestion 555
 set -U fish_history 50000
 
+# Git config
+set -x GIT_CONFIG ~/.config/git/.gitconfig
+
 # fzf configuration
 set -x FZF_COMPLETION_TRIGGER "~~"
 set -x FZF_DEFAULT_COMMAND "fd --hidden --strip-cwd-prefix --exclude .git"
@@ -66,9 +69,6 @@ source ~/.private.fish
 
 # Starship prompt
 starship init fish | source
-
-# Carapace initialization
-carapace _carapace | source
 
 # zoxide
 eval (zoxide init fish)
