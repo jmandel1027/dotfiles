@@ -1,0 +1,8 @@
+DATABRICKS_HOST: ${DATABRICKS_HOST}
+GOOSE_MODEL: goose
+GOOSE_PROVIDER: databricks
+extensions:
+  developer:
+    enabled: true
+    name: developer
+    type: builtin

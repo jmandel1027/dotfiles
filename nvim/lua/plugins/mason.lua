@@ -4,6 +4,7 @@ return {
     opts = {
       ensure_installed = {
         "black",
+        "bzl",
         "docker-compose-language-service",
         "dockerfile-language-server",
         "eslint-lsp",
@@ -24,6 +25,7 @@ return {
         "shellcheck",
         "shfmt",
         "standardrb",
+        "starlark-rust",
         "stylua",
         "tailwindcss-language-server",
         "terraform-ls",

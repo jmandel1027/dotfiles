@@ -38,6 +38,7 @@ return {
         "ruby",
         "rust",
         "sql",
+        "starlark",
         "terraform",
         "toml",
         "tsx",

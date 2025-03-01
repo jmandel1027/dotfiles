@@ -57,3 +57,9 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
     ]])
   end,
 })
+
+-- Set filetype for Tiltfile to python
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = "Tiltfile",
+  command = "setfiletype python",
+})

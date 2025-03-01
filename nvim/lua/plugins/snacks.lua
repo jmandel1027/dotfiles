@@ -10,9 +10,9 @@ return {
         sections = {
           {
             section = "terminal",
-            cmd = "chafa ~/.config/media/block-400.png --format symbols --symbols vhalf --size 60x20",
+            cmd = "chafa ~/.config/media/block-400.png --format symbols --symbols vhalf --size 48x20",
             height = 20,
-            width = 60,
+            width = 40,
             pane = 2,
           },
           {

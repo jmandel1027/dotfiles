@@ -44,8 +44,11 @@ set -x GOPATH $HOME/go
 set -x GOBIN $GOPATH/bin
 set -x GOROOT (brew --prefix golang)/libexec
 
-# PATH
+# Go Path
 set -x PATH $PATH $GOPATH/bin $GOROOT/bin
+
+# .local Path
+set -x PATH /Users/jmandel/.local/bin $PATH
 
 # tmux integration
 set -x TMUX_CONF ~/.config/tmux/tmux.conf

@@ -4,8 +4,10 @@ github*
 iterm2/AppSupport*
 iterm2/sockets*
 tmux/plugins*
+.tmux/plugins*
 fish/completions/*
 github-copilot*
+goose/*/oauth/*
 packer*
 nix.bak*
 nix/darwin/flake.nix
