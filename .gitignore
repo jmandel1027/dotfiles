@@ -8,6 +8,8 @@ tmux/plugins*
 fish/completions/*
 github-copilot*
 goose/*/oauth/*
+goose/mcp-*
+goose/memory/*
 packer*
 nix.bak*
 nix/darwin/flake.nix

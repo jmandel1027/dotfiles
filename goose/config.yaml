@@ -1,8 +1,9 @@
-DATABRICKS_HOST: ${DATABRICKS_HOST}
 GOOSE_MODEL: goose
+DATABRICKS_HOST: ${DATABRICKS_HOST}
 GOOSE_PROVIDER: databricks
 extensions:
   developer:
     enabled: true
     name: developer
     type: builtin
+GOOSE_MODE: smart_approve

@@ -28,7 +28,7 @@ set -U fish_color_autosuggestion 555
 set -U fish_history 50000
 
 # Git config
-set -x GIT_CONFIG ~/.config/git/.gitconfig
+set -x GIT_CONFIG ~/.gitconfig
 
 # fzf configuration
 set -x FZF_COMPLETION_TRIGGER "~~"

@@ -32,6 +32,11 @@ return {
         "tflint",
         "typescript-language-server",
       },
+      settings = {
+        editorconfig = {
+          enforce = true,
+        },
+      },
     },
   },
 }
