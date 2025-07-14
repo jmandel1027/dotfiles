@@ -28,7 +28,7 @@ set -U fish_color_autosuggestion 555
 set -U fish_history 50000
 
 # Git config
-set -x GIT_CONFIG ~/.gitconfig
+# set -x GIT_CONFIG ~/.gitconfig
 
 # fzf configuration
 set -x FZF_COMPLETION_TRIGGER "~~"
@@ -62,6 +62,13 @@ set -x LSD_CONFIG_FILE ~/.config/lsd/config.yaml
 
 # Rancher Desktop PATH
 set -x PATH /Users/jmandel/.rd/bin $PATH
+
+# hmebrew opts and executables
+for dir in /opt/homebrew/opt/*/bin
+    if test -d $dir
+        set -x PATH $dir $PATH
+    end
+end
 
 # Ghostty integration
 if test -n "$GHOSTTY_RESOURCES_DIR"

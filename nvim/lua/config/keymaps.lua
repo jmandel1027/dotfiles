@@ -7,3 +7,6 @@ vim.keymap.set("n", "<c-h>", ":wincmd h<CR>")
 vim.keymap.set("n", "<c-l>", ":wincmd l<CR>")
 
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
+
+-- toggle hardtime
+vim.api.nvim_set_keymap("n", "<C-H>", ":Hardtime toggle<CR>", { noremap = true, silent = true })

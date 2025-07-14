@@ -26,6 +26,7 @@ vim.o.conceallevel = 1 -- Show concealable characters
 vim.o.wrap = true -- Enable line wrapping
 vim.o.sidescrolloff = 999 -- Prevent horizontal scrolling unless necessary
 
+vim.diagnostic.config({ virtual_lines = true })
 -- keymaps
 -- Enable 24-bit RGB colors
 vim.o.termguicolors = true

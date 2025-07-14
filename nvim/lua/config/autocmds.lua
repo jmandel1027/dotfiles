@@ -63,3 +63,12 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   pattern = "Tiltfile",
   command = "setfiletype python",
 })
+
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = "*",
+  callback = function()
+    if vim.fn.expand("%:e") == "" then
+      vim.bo.filetype = "bash"
+    end
+  end,
+})

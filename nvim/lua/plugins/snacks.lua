@@ -46,6 +46,7 @@ return {
       terminal = { enabled = false },
       scroll = { enabled = false },
       indent = { enabled = true },
+      picker = { enabled = true },
       profiler = { enabled = true },
       styles = {
         notification = {

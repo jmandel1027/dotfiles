@@ -32,8 +32,6 @@ return {
         filetypes = { "sh" },
         root_dir = require("lspconfig").util.find_git_ancestor,
       })
-
-      -- require("lspconfig").tilt_ls.setup({})
     end,
   },
 }
