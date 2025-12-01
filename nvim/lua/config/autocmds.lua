@@ -72,3 +72,19 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
     end
   end,
 })
+
+-- Open Claude Code with different split options
+vim.api.nvim_create_user_command("ClaudeCode", function(opts)
+  local direction = opts.args ~= "" and opts.args or "v"
+  local split_cmd = direction == "h" and "split-window -h" or "split-window -v"
+  vim.fn.system("tmux " .. split_cmd .. ' "claude"')
+end, {
+  nargs = "?",
+  complete = function()
+    return { "v", "h" }
+  end,
+})
+
+-- Keybindings
+vim.keymap.set("n", "<leader>cv", ":ClaudeCode h<CR>", { desc = "Claude Code (vertical)" })
+vim.keymap.set("n", "<leader>ch", ":ClaudeCode v<CR>", { desc = "Claude Code (horizontal)" })

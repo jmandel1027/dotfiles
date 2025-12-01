@@ -9,13 +9,6 @@ return {
         pane_gap = 10,
         sections = {
           {
-            section = "terminal",
-            cmd = "chafa ~/.config/media/block-400.png --format symbols --symbols vhalf --size 48x20",
-            height = 20,
-            width = 40,
-            pane = 2,
-          },
-          {
             pane = 2,
             icon = " ",
             title = "Git Status\n",

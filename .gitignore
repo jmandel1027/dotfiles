@@ -1,4 +1,5 @@
 btop/*.log
+configstore*
 !ghostty*
 github*
 iterm2/AppSupport*
