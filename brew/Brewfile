@@ -6,6 +6,7 @@
 # ============================================
 brew "neovim"
 brew "git"
+brew "gh"
 brew "tmux"
 
 # ============================================
@@ -32,7 +33,7 @@ brew "node"
 brew "python@3"
 brew "ruby"
 brew "lua"
-brew "bun"
+brew "oven-sh/bun/bun"
 
 # ============================================
 # Formatters & linters (system-level)
@@ -49,7 +50,6 @@ brew "terraform"
 brew "tflint"
 brew "helm"
 brew "kubectl"
-brew "cashapp/hermit/hermit"
 
 # ============================================
 # Casks
