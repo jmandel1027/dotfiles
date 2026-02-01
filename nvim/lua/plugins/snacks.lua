@@ -11,22 +11,9 @@ return {
         row = nil, -- auto-center vertically
         col = nil, -- auto-center horizontally
         sections = {
-<<<<<<< HEAD
-          {
-||||||| parent of 34d6ec6 (fix: updates)
-          {
-            section = "terminal",
-            cmd = "chafa ~/.config/media/block-400.png --format symbols --symbols vhalf --size 48x20",
-            height = 20,
-            width = 40,
-            pane = 2,
-          },
-          {
-=======
           { text = "", padding = 3 }, -- vertical spacer at top for pane 1
           { text = "", padding = 3, pane = 2 }, -- vertical spacer at top for pane 2
           {
->>>>>>> 34d6ec6 (fix: updates)
             pane = 2,
             icon = " ",
             title = "Git Status\n",

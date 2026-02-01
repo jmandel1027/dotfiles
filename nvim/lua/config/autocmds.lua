@@ -40,7 +40,7 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
     end
   end,
 })
-<<<<<<< HEAD
+
 
 -- Open Claude Code with different split options
 vim.api.nvim_create_user_command("ClaudeCode", function(opts)
@@ -57,8 +57,6 @@ end, {
 -- Keybindings
 vim.keymap.set("n", "<leader>cv", ":ClaudeCode h<CR>", { desc = "Claude Code (vertical)" })
 vim.keymap.set("n", "<leader>ch", ":ClaudeCode v<CR>", { desc = "Claude Code (horizontal)" })
-||||||| parent of 34d6ec6 (fix: updates)
-=======
 
 -- Fix terraform commentstring
 vim.api.nvim_create_autocmd({ "FileType" }, {
@@ -69,4 +67,3 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
     ]])
   end,
 })
->>>>>>> 34d6ec6 (fix: updates)
