@@ -1,0 +1,58 @@
+# Brewfile - Neovim setup dependencies
+# Install with: brew bundle --file=~/.config/brew/Brewfile
+
+# ============================================
+# Core tools
+# ============================================
+brew "neovim"
+brew "git"
+brew "tmux"
+
+# ============================================
+# Shell & terminal
+# ============================================
+brew "fish"
+brew "starship"
+brew "zoxide"
+brew "bat"
+brew "lsd"
+
+# ============================================
+# Search & navigation (used by neovim plugins)
+# ============================================
+brew "fzf"
+brew "ripgrep"
+brew "fd"
+
+# ============================================
+# Language runtimes
+# ============================================
+brew "go"
+brew "node"
+brew "python@3"
+brew "ruby"
+brew "lua"
+brew "bun"
+
+# ============================================
+# Formatters & linters (system-level)
+# Mason installs most of these, but having
+# them in brew ensures they're available
+# globally and for Mason bootstrapping.
+# ============================================
+brew "stylua"
+brew "shellcheck"
+brew "shfmt"
+brew "hadolint"
+brew "golangci-lint"
+brew "terraform"
+brew "tflint"
+brew "helm"
+brew "kubectl"
+brew "cashapp/hermit/hermit"
+
+# ============================================
+# Casks
+# ============================================
+cask "ghostty"
+cask "rancher"
