@@ -6,6 +6,7 @@
 --
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
+
 local numbertogglegroup = vim.api.nvim_create_augroup("numbertoggle", { clear = true })
 
 -- toggle relative numbers
@@ -25,39 +26,6 @@ vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost", "InsertEnter" }, {
   group = numbertogglegroup,
 })
 
--- Disable horizontal scrolling in NeoTree
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = "neo-tree",
-  callback = function()
-    vim.cmd([[
-      setlocal scrolloff=999
-    ]])
-  end,
-})
-
--- disable NeoTree italics
-vim.api.nvim_create_autocmd({ "Colorscheme", "BufReadPre", "BufNewFile" }, {
-  pattern = "*",
-  callback = function()
-    vim.cmd([[
-      hi NeoTreeGitConflict gui=bold
-      hi NeoTreeGitUntracked gui=none
-      hi NeoTreeMessage gui=none
-      hi NeoTreeRootName gui=bold
-    ]])
-  end,
-})
-
--- Fix terraform commentstring
-vim.api.nvim_create_autocmd({ "FileType" }, {
-  pattern = "terraform",
-  callback = function()
-    vim.cmd([[
-      setlocal commentstring=#\ %s
-    ]])
-  end,
-})
-
 -- Set filetype for Tiltfile to python
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   pattern = "Tiltfile",
@@ -72,6 +40,7 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
     end
   end,
 })
+<<<<<<< HEAD
 
 -- Open Claude Code with different split options
 vim.api.nvim_create_user_command("ClaudeCode", function(opts)
@@ -88,3 +57,16 @@ end, {
 -- Keybindings
 vim.keymap.set("n", "<leader>cv", ":ClaudeCode h<CR>", { desc = "Claude Code (vertical)" })
 vim.keymap.set("n", "<leader>ch", ":ClaudeCode v<CR>", { desc = "Claude Code (horizontal)" })
+||||||| parent of 34d6ec6 (fix: updates)
+=======
+
+-- Fix terraform commentstring
+vim.api.nvim_create_autocmd({ "FileType" }, {
+  pattern = "terraform",
+  callback = function()
+    vim.cmd([[
+      setlocal commentstring=#\ %s
+    ]])
+  end,
+})
+>>>>>>> 34d6ec6 (fix: updates)

@@ -18,18 +18,31 @@ require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+<<<<<<< HEAD
     -- { import = "lazyvim.plugins.extras.ai.copilot" },
     -- { import = "lazyvim.plugins.extras.ai.copilot-chat" },
+||||||| parent of 34d6ec6 (fix: updates)
+    { import = "lazyvim.plugins.extras.ai.copilot" },
+    { import = "lazyvim.plugins.extras.ai.copilot-chat" },
+=======
+    -- import/override with your plugins
+    { import = "lazyvim.plugins.extras.ai.claudecode" },
+>>>>>>> 34d6ec6 (fix: updates)
     { import = "lazyvim.plugins.extras.lang.docker" },
     { import = "lazyvim.plugins.extras.lang.go" },
     { import = "lazyvim.plugins.extras.lang.json" },
     { import = "lazyvim.plugins.extras.lang.markdown" },
+<<<<<<< HEAD
     -- { import = "lazyvim.plugins.extras.lang.sql" },
+||||||| parent of 34d6ec6 (fix: updates)
+    { import = "lazyvim.plugins.extras.lang.sql" },
+=======
+>>>>>>> 34d6ec6 (fix: updates)
     { import = "lazyvim.plugins.extras.lang.terraform" },
     { import = "lazyvim.plugins.extras.lang.toml" },
     { import = "lazyvim.plugins.extras.lang.typescript" },
     { import = "lazyvim.plugins.extras.lang.yaml" },
-    -- import/override with your plugins
+    { import = "lazyvim.plugins.extras.lang.helm" },
     { import = "plugins" },
   },
   defaults = {
