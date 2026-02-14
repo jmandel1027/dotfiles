@@ -1,7 +1,8 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR __fish_initialized:4300
+SETUVAR __fish_initialized:3800
 SETUVAR fish_color_autosuggestion:555
 SETUVAR fish_history:50000
 SETUVAR fish_history_max:100000
+SETUVAR fish_key_bindings:fish_default_key_bindings
 SETUVAR --export fish_user_paths:/opt/homebrew/bin/
