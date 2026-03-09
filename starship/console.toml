@@ -20,19 +20,18 @@ format = "$symbol"
 disabled = false
 
 [aws]
-format = 'in [$symbol($profile ) ($region )]($style)'
+format = 'in [$symbol ($profile) (🗺️ $region)]($style)'
 symbol = '☁️'
 
 [aws.region_aliases]
-ap-southeast-2 = 'apse2'
-ap-southeast-1 = 'apse1'
-us-west-2 = 'uswe2'
-us-east-1 = 'usea1'
-eu-west-1 = 'euwe1'
-eu-central-1 = 'euce1'
+ap-southeast-2 = 'aps2'
+ap-southeast-1 = 'aps1'
+us-west-2 = 'usw2'
+us-east-1 = 'use1'
+eu-west-1 = 'euw1'
+eu-central-1 = 'euc1'
 
 # ---
-
 [os]
 format = '[$symbol](bold white) '
 disabled = false

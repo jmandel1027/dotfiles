@@ -1,8 +1,18 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR __fish_initialized:3800
+SETUVAR --export API_URL:https\x3a//costate\x2dconcretively\x2djuan\x2engrok\x2dfree\x2edev
+SETUVAR --export AWS_ACCOUNT_ID:361966321345
+SETUVAR --export AWS_PROFILE:admin
+SETUVAR --export NEXT_PUBLIC_API_URL:/api
+SETUVAR --export PULUMI_SKIP_CHECKPOINTS:true
+SETUVAR --export --path TERRAGRUNT_TFPATH:tofu
+SETUVAR --export TF_STATE_BUCKET:runway\x2estaging\x2ekikoff\x2estate
+SETUVAR --export TF_STATE_REGION:us\x2dwest\x2d2
+SETUVAR __fish_initialized:4300
+SETUVAR _fisher_edc_2F_bass_files:\x7e/\x2econfig/fish/functions/__bass\x2epy\x1e\x7e/\x2econfig/fish/functions/bass\x2efish
+SETUVAR _fisher_plugins:edc/bass
+SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR fish_color_autosuggestion:555
 SETUVAR fish_history:50000
 SETUVAR fish_history_max:100000
-SETUVAR fish_key_bindings:fish_default_key_bindings
-SETUVAR --export fish_user_paths:/opt/homebrew/bin/
+SETUVAR --export fish_user_paths:/opt/homebrew/bin/\x1e/Users/jason/\x2elocal/bin

@@ -93,3 +93,4 @@ set --export --prepend PATH "/Users/jmandel/.rd/bin"
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+source $HOME/.kikoffrc
