@@ -4,7 +4,6 @@ return {
     opts = {
       ensure_installed = {
         "black",
-        "bzl",
         "docker-compose-language-service",
         "dockerfile-language-server",
         "eslint-lsp",

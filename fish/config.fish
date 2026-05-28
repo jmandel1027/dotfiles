@@ -87,7 +87,7 @@ eval (zoxide init fish)
 eval (fzf --fish)
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-set --export --prepend PATH "/Users/jmandel/.rd/bin"
+set --export --prepend PATH "/Users/jason/.rd/bin"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
 # bun

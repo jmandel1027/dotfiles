@@ -1,9 +1,14 @@
+[init]
+	defaultBranch = main
+[commit]
+	gpgsign = true
 [push]
 	config = default
 	default = current
 [diff]
 	renames = true
 	indentHeuristic = on
+	algorithm = histogram
 [status]
 	showUntrackedFiles = all
 [branch]
@@ -14,6 +19,9 @@
 [rebase]
 	autosquash = true
 	autostash = true
+[core]
+	autocrlf = input
+	editor = code --wait
 [color]
 	diff = auto
 	status = auto
@@ -62,6 +70,9 @@
 	enabled = 1
 [pull]
 	rebase = true
+[push]
+	default = simple
+	autoSetupRemote = true
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -71,4 +82,5 @@
 	manyFiles = true
 [log]
   mailmap = true
-
+[gpg]
+	format = ssh

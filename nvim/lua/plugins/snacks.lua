@@ -47,11 +47,9 @@ return {
       indent = { enabled = true },
       picker = {
         hidden = true, -- Show hidden files (dotfiles)
-        -- If you also want to show .gitignore'd files, uncomment the line below:
-        no_ignore = true,
       },
 
-      profiler = { enabled = true },
+      profiler = { enabled = false },
       styles = {
         notification = {
           wo = { wrap = true }, -- Wrap notifications
